@@ -249,7 +249,96 @@
   flex: 1 1 0;
 }
 
+
+.cm-services {
+  background: #f4f6fa;
+}
+
+.cm-services__title {
+  margin: 0;
+  color: #1a2740;
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.cm-services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+}
+
+.cm-card,
+.cm-service-card {
+  position: relative;
+  border-radius: 1rem;
+  background: #ffffff;
+  border: 1px solid rgba(26, 39, 64, 0.08);
+  box-shadow: 0 10px 24px rgba(12, 26, 52, 0.08);
+}
+
+.cm-service-card {
+  padding: 1.9rem 1.2rem 1.2rem;
+}
+
+.cm-service-card__icon {
+  position: absolute;
+  top: -0.7rem;
+  left: 1.2rem;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 999px;
+  background: var(--cm-color-accent);
+  box-shadow: 0 6px 14px rgba(255, 122, 26, 0.35);
+}
+
+.cm-service-card__title {
+  margin: 0;
+  font-size: 1.15rem;
+  color: var(--cm-color-accent);
+}
+
+.cm-service-card__text {
+  margin: 0.65rem 0 0;
+  color: #6b7589;
+  line-height: 1.55;
+  font-size: 0.97rem;
+}
+
+.cm-service-card__cta {
+  margin: 1rem 0 0;
+}
+
+.cm-service-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2rem;
+  padding: 0.38rem 0.95rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 122, 26, 0.52);
+  color: #ffffff;
+  background: linear-gradient(90deg, #ff7a1a 0%, #ffa04e 100%);
+  text-decoration: none;
+  font-size: 0.84rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cm-service-card__button:hover,
+.cm-service-card__button:focus-visible {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 14px rgba(255, 122, 26, 0.26);
+}
+
 @media (min-width: 600px) {
+  .cm-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cm-service-card {
+    padding: 2rem 1.4rem 1.35rem;
+  }
+
   .cm-hero-inner {
     gap: 1.8rem;
   }
@@ -260,6 +349,11 @@
 }
 
 @media (min-width: 900px) {
+  .cm-services-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+
   .cm-hero-section {
     min-height: 68vh;
     display: flex;
@@ -341,6 +435,14 @@
 }
 
 @media (min-width: 1200px) {
+  .cm-services-grid {
+    gap: 1.75rem;
+  }
+
+  .cm-service-card {
+    padding: 2.1rem 1.5rem 1.5rem;
+  }
+
   .cm-section {
     padding-block: clamp(3rem, 6vw, 6rem);
   }
