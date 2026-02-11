@@ -1,0 +1,41 @@
+<!-- wp:template-part {"slug":"header","theme":"comedical","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"cm-main-content cm-container cm-section","layout":{"type":"constrained"}} -->
+<main class="wp-block-group cm-main-content cm-container cm-section">
+  <!-- wp:group {"className":"cm-project-archive-header","layout":{"type":"constrained"}} -->
+  <div class="wp-block-group cm-project-archive-header">
+    <!-- wp:query-title {"type":"archive","showPrefix":false,"className":"cm-project-archive-title"} /-->
+    <!-- wp:term-description {"className":"cm-project-archive-description"} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"project","order":"desc","orderBy":"date","inherit":true},"layout":{"type":"default"}} -->
+  <div class="wp-block-query">
+    <!-- wp:post-template {"className":"cm-project-grid","layout":{"type":"grid","columnCount":3}} -->
+    <!-- wp:group {"className":"cm-project-card","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group cm-project-card">
+      <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","className":"cm-project-card__image"} /-->
+      <!-- wp:post-title {"isLink":true,"level":2,"className":"cm-project-card__title"} /-->
+      <!-- wp:post-excerpt {"moreText":"","className":"cm-project-card__excerpt"} /-->
+      <!-- wp:read-more {"content":"Projekt ansehen","className":"cm-project-card__button"} /-->
+    </div>
+    <!-- /wp:group -->
+    <!-- /wp:post-template -->
+
+    <!-- wp:query-no-results -->
+    <!-- wp:paragraph -->
+    <p>Aktuell sind noch keine Projekte veröffentlicht.</p>
+    <!-- /wp:paragraph -->
+    <!-- /wp:query-no-results -->
+
+    <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+    <!-- wp:query-pagination-previous /-->
+    <!-- wp:query-pagination-numbers /-->
+    <!-- wp:query-pagination-next /-->
+    <!-- /wp:query-pagination -->
+  </div>
+  <!-- /wp:query -->
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","theme":"comedical","tagName":"footer"} /-->
