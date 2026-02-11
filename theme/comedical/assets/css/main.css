@@ -624,3 +624,115 @@
     font-size: clamp(3.2rem, 5vw, 5.2rem);
   }
 }
+
+.cm-project-archive-header {
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.cm-project-archive-title,
+.cm-project-hero__title {
+  margin: 0;
+  color: var(--cm-color-text);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.cm-project-archive-description,
+.cm-project-hero__excerpt {
+  margin-top: 0.85rem;
+  max-width: 70ch;
+  color: var(--cm-color-text-muted);
+}
+
+.cm-project-grid {
+  gap: 1.2rem;
+}
+
+.cm-project-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.1rem;
+}
+
+.cm-project-card__image {
+  margin: -1.1rem -1.1rem 1rem;
+  border-radius: 1rem 1rem 0 0;
+  overflow: hidden;
+}
+
+.cm-project-card__title {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.cm-project-card__title a {
+  color: #1a2740;
+  text-decoration: none;
+}
+
+.cm-project-card__title a:hover,
+.cm-project-card__title a:focus-visible {
+  color: var(--cm-color-accent);
+}
+
+.cm-project-card__excerpt {
+  margin-top: 0.8rem;
+  color: #56617a;
+}
+
+.cm-project-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  min-height: 2.6rem;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--cm-color-accent);
+  border-radius: 999px;
+  color: #1a2740;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.cm-project-card__button:hover,
+.cm-project-card__button:focus-visible {
+  background: var(--cm-color-accent);
+  color: var(--cm-color-text);
+}
+
+.cm-project-single {
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.cm-project-hero {
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.cm-project-hero__image {
+  margin-top: 1.3rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.cm-project-content {
+  color: var(--cm-color-text);
+}
+
+.cm-project-back {
+  margin-top: clamp(1.2rem, 2vw, 2rem);
+}
+
+@media (min-width: 900px) {
+  .cm-project-grid {
+    gap: 1.4rem;
+  }
+
+  .cm-project-card {
+    padding: 1.3rem;
+  }
+
+  .cm-project-card__image {
+    margin: -1.3rem -1.3rem 1.1rem;
+  }
+}
