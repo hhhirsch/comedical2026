@@ -981,3 +981,124 @@
     flex-basis: calc((100% - (2 * clamp(0.9rem, 2vw, 1.3rem))) / 3);
   }
 }
+
+.cm-site-footer {
+  position: relative;
+  overflow: hidden;
+  padding-block: clamp(2.5rem, 5vw, 4.5rem);
+  background:
+    radial-gradient(540px 280px at 95% 85%, rgba(35, 110, 204, 0.28), transparent 72%),
+    radial-gradient(420px 260px at 8% 15%, rgba(255, 122, 26, 0.08), transparent 70%),
+    linear-gradient(180deg, #03122e 0%, #020d23 100%);
+}
+
+.cm-site-footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 0.6px, transparent 0.6px);
+  background-size: 24px 24px;
+  opacity: 0.2;
+}
+
+.cm-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.cm-footer__brand {
+  margin-bottom: clamp(1.25rem, 3vw, 2.2rem);
+}
+
+.cm-footer__logo {
+  margin: 0;
+  line-height: 1;
+}
+
+.cm-footer__logo a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--cm-color-text);
+  text-decoration: none;
+  font-size: clamp(1.6rem, 2.8vw, 2.25rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.cm-footer__grid {
+  --bs-gap: clamp(1.8rem, 4vw, 3.5rem);
+  gap: var(--bs-gap);
+}
+
+.cm-footer__col {
+  min-width: 160px;
+}
+
+.cm-footer__title {
+  margin: 0 0 1rem;
+  color: var(--cm-color-text);
+  font-size: 1.05rem;
+  line-height: 1.35;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.cm-footer__title--brands {
+  margin-top: 2rem;
+}
+
+.cm-footer__links {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.cm-footer__links li,
+.cm-footer__links a {
+  color: #d4dbe8;
+  font-size: 0.98rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cm-footer__links a:hover,
+.cm-footer__links a:focus-visible {
+  color: var(--cm-color-accent);
+  outline: none;
+}
+
+.cm-footer__social {
+  margin: 0;
+}
+
+.cm-footer__linkedin {
+  inline-size: 2.4rem;
+  block-size: 2.4rem;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cm-color-accent);
+  color: var(--cm-color-text);
+  font-weight: 700;
+  font-size: 1.15rem;
+  text-decoration: none;
+  text-transform: lowercase;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.cm-footer__linkedin:hover,
+.cm-footer__linkedin:focus-visible {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+  outline: none;
+}
+
+@media (max-width: 900px) {
+  .cm-footer__title--brands {
+    margin-top: 1.35rem;
+  }
+}
