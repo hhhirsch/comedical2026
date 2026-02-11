@@ -1,43 +1,46 @@
-(function () {
-  function initSlider(slider) {
-    var track = slider.querySelector('.cm-slider__query .wp-block-post-template, .cm-slider__track');
-    var prev = slider.querySelector('[data-cm-slider-prev]');
-    var next = slider.querySelector('[data-cm-slider-next]');
+(() => {
+  const sliders = document.querySelectorAll('[data-cm-slider]');
 
-    if (!track || !prev || !next) {
+  if (!sliders.length) {
+    return;
+  }
+
+  const setupSlider = (slider) => {
+    const viewport = slider.querySelector('[data-cm-slider-viewport]');
+    const prevButton = slider.querySelector('.cm-slider__arrow--prev');
+    const nextButton = slider.querySelector('.cm-slider__arrow--next');
+
+    if (!viewport || !prevButton || !nextButton) {
       return;
     }
 
-    var getStep = function () {
-      var firstItem = track.querySelector(':scope > li');
-      if (!firstItem) {
-        return track.clientWidth * 0.9;
-      }
-
-      var itemStyles = window.getComputedStyle(firstItem);
-      var marginRight = parseFloat(itemStyles.marginRight) || 0;
-      return firstItem.getBoundingClientRect().width + marginRight;
+    const updateButtonState = () => {
+      const maxScrollLeft = viewport.scrollWidth - viewport.clientWidth;
+      prevButton.disabled = viewport.scrollLeft <= 1;
+      nextButton.disabled = viewport.scrollLeft >= maxScrollLeft - 1;
     };
 
-    var updateState = function () {
-      var maxLeft = track.scrollWidth - track.clientWidth;
-      prev.disabled = track.scrollLeft <= 1;
-      next.disabled = track.scrollLeft >= maxLeft - 1;
+    const getScrollStep = () => {
+      const firstSlide = viewport.querySelector('.cm-slider__track > li');
+      const slideWidth = firstSlide ? firstSlide.getBoundingClientRect().width : viewport.clientWidth;
+      const track = viewport.querySelector('.cm-slider__track');
+      const gap = track ? parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap || '0') : 0;
+      return slideWidth + gap;
     };
 
-    prev.addEventListener('click', function () {
-      track.scrollBy({ left: -getStep(), behavior: 'smooth' });
+    prevButton.addEventListener('click', () => {
+      viewport.scrollBy({ left: -getScrollStep(), behavior: 'smooth' });
     });
 
-    next.addEventListener('click', function () {
-      track.scrollBy({ left: getStep(), behavior: 'smooth' });
+    nextButton.addEventListener('click', () => {
+      viewport.scrollBy({ left: getScrollStep(), behavior: 'smooth' });
     });
 
-    track.addEventListener('scroll', updateState, { passive: true });
-    window.addEventListener('resize', updateState);
+    viewport.addEventListener('scroll', updateButtonState, { passive: true });
+    window.addEventListener('resize', updateButtonState);
 
-    updateState();
-  }
+    updateButtonState();
+  };
 
-  document.querySelectorAll('[data-cm-slider]').forEach(initSlider);
+  sliders.forEach(setupSlider);
 })();
