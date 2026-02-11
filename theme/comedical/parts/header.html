@@ -1,7 +1,30 @@
-<!-- wp:group {"tagName":"header","className":"cm-site-header cm-container cm-section","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"wrap"}} -->
-<header class="wp-block-group cm-site-header cm-container cm-section">
-  <!-- wp:site-title {"level":0,"className":"cm-site-title"} /-->
+<!-- wp:group {"tagName":"header","className":"cm-site-header","layout":{"type":"constrained"}} -->
+<header class="wp-block-group cm-site-header">
+  <!-- wp:group {"className":"cm-container cm-header-inner","layout":{"type":"flex","justifyContent":"space-between","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+  <div class="wp-block-group cm-container cm-header-inner">
+    <!-- wp:site-title {"level":0,"className":"cm-site-title"} /-->
 
-  <!-- wp:navigation {"overlayMenu":"mobile","className":"cm-main-nav","layout":{"type":"flex","justifyContent":"right"}} /-->
+    <!-- wp:group {"className":"cm-header-actions","layout":{"type":"flex","justifyContent":"right","verticalAlignment":"center","flexWrap":"nowrap"}} -->
+    <div class="wp-block-group cm-header-actions">
+      <!-- wp:navigation {"overlayMenu":"mobile","className":"cm-main-nav","layout":{"type":"flex","justifyContent":"right"}} -->
+      <!-- wp:navigation-link {"label":"Home","url":"/"} /-->
+      <!-- wp:navigation-link {"label":"Agentur","url":"/#agentur"} /-->
+      <!-- wp:navigation-link {"label":"Referenzen","url":"/#referenzen"} /-->
+      <!-- wp:navigation-link {"label":"Karriere","url":"/#karriere"} /-->
+      <!-- wp:navigation-link {"label":"Services","url":"/#services"} /-->
+      <!-- wp:navigation-link {"label":"Kontakt","url":"/#kontakt","className":"cm-nav-contact-mobile"} /-->
+      <!-- /wp:navigation -->
+
+      <!-- wp:buttons {"className":"cm-header-contact"} -->
+      <div class="wp-block-buttons cm-header-contact">
+        <!-- wp:button {"className":"cm-btn--outline"} -->
+        <div class="wp-block-button cm-btn--outline"><a class="wp-block-button__link wp-element-button" href="/#kontakt">Kontakt</a></div>
+        <!-- /wp:button -->
+      </div>
+      <!-- /wp:buttons -->
+    </div>
+    <!-- /wp:group -->
+  </div>
+  <!-- /wp:group -->
 </header>
 <!-- /wp:group -->

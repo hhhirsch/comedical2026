@@ -20,10 +20,63 @@
   padding-block: 1.25rem;
 }
 
+.cm-site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(11, 19, 32, 0.96);
+  border-bottom: 1px solid rgba(183, 195, 212, 0.18);
+  backdrop-filter: blur(12px);
+}
+
+.cm-header-inner {
+  min-height: 68px;
+  gap: 1.25rem;
+}
+
+.cm-site-title {
+  margin: 0;
+  line-height: 1;
+}
+
 .cm-site-title a,
 .cm-main-nav a,
 .cm-footer-text {
   color: var(--cm-color-text);
+}
+
+.cm-site-title a {
+  text-decoration: none;
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  font-weight: 700;
+}
+
+.cm-header-actions {
+  gap: 0.8rem;
+}
+
+.cm-main-nav .wp-block-navigation__container {
+  gap: 0.35rem;
+}
+
+.cm-main-nav .wp-block-navigation-item__content {
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.96rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.cm-main-nav .wp-block-navigation-item__content:hover,
+.cm-main-nav .wp-block-navigation-item__content:focus-visible {
+  color: var(--cm-color-accent);
+  background: rgba(255, 255, 255, 0.08);
+  outline: none;
+}
+
+.cm-main-nav .cm-nav-contact-mobile {
+  display: none;
 }
 
 .cm-main-content {
@@ -32,7 +85,8 @@
 }
 
 .wp-block-button.cm-btn-primary .wp-block-button__link,
-.wp-block-button.cm-btn-secondary .wp-block-button__link {
+.wp-block-button.cm-btn-secondary .wp-block-button__link,
+.wp-block-button.cm-btn--outline .wp-block-button__link {
   border-radius: 999px;
   border: 2px solid transparent;
   padding: 0.85rem 1.4rem;
@@ -52,10 +106,19 @@
   color: var(--cm-color-text);
 }
 
+.wp-block-button.cm-btn--outline .wp-block-button__link {
+  background: transparent;
+  border-color: var(--cm-color-accent);
+  color: var(--cm-color-text);
+  min-width: 112px;
+}
+
 .wp-block-button.cm-btn-primary .wp-block-button__link:hover,
 .wp-block-button.cm-btn-primary .wp-block-button__link:focus-visible,
 .wp-block-button.cm-btn-secondary .wp-block-button__link:hover,
-.wp-block-button.cm-btn-secondary .wp-block-button__link:focus-visible {
+.wp-block-button.cm-btn-secondary .wp-block-button__link:focus-visible,
+.wp-block-button.cm-btn--outline .wp-block-button__link:hover,
+.wp-block-button.cm-btn--outline .wp-block-button__link:focus-visible {
   transform: translateY(-2px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.24);
 }
@@ -71,8 +134,15 @@
   color: var(--cm-color-accent);
 }
 
+.wp-block-button.cm-btn--outline .wp-block-button__link:hover,
+.wp-block-button.cm-btn--outline .wp-block-button__link:focus-visible {
+  background: var(--cm-color-accent);
+  color: var(--cm-color-text);
+  border-color: var(--cm-color-accent);
+}
+
 .wp-block-button .wp-block-button__link:focus-visible {
-  outline: 3px solid rgba(255, 122, 26, 0.4);
+  outline: 3px solid rgba(255, 122, 26, 0.55);
   outline-offset: 2px;
 }
 
@@ -152,6 +222,49 @@
 
   .cm-kpi-row {
     gap: 2rem;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .cm-header-inner {
+    min-height: 62px;
+  }
+
+  .cm-main-nav .wp-block-navigation__responsive-container-open {
+    padding: 0.45rem;
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    border-radius: 10px;
+    color: var(--cm-color-text);
+  }
+
+  .cm-main-nav .wp-block-navigation__responsive-container {
+    background: rgba(11, 19, 32, 0.98);
+    color: var(--cm-color-text);
+    padding: 1.5rem;
+  }
+
+  .cm-main-nav .wp-block-navigation__responsive-container-content {
+    align-items: flex-start;
+  }
+
+  .cm-main-nav .wp-block-navigation__responsive-container .wp-block-navigation__container {
+    width: 100%;
+    gap: 0.25rem;
+  }
+
+  .cm-main-nav .wp-block-navigation__responsive-container .wp-block-navigation-item__content {
+    width: 100%;
+    padding: 0.75rem 0.5rem;
+    border-radius: 8px;
+  }
+
+  .cm-header-contact {
+    display: none;
+  }
+
+  .cm-main-nav .cm-nav-contact-mobile {
+    display: list-item;
   }
 }
 
