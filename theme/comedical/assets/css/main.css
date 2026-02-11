@@ -1033,19 +1033,6 @@ body {
   }
 }
 
-
-@media (min-width: 600px) {
-  .cm-container {
-    width: min(100% - 2.5rem, var(--cm-container-width));
-  }
-}
-
-@media (min-width: 900px) {
-  .cm-container {
-    width: min(100% - 3rem, var(--cm-container-width));
-  }
-}
-
 .cm-site-footer {
   position: relative;
   overflow: hidden;
