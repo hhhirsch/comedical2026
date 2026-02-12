@@ -50,14 +50,14 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(11, 19, 32, 0.96);
-  border-bottom: 1px solid rgba(183, 195, 212, 0.18);
-  backdrop-filter: blur(12px);
+  background: rgba(11, 19, 32, 0.92);
+  border-bottom: 1px solid rgba(183, 195, 212, 0.14);
+  backdrop-filter: blur(8px);
 }
 
 .cm-header-inner {
-  min-height: 68px;
-  gap: 1.25rem;
+  min-height: 60px;
+  gap: 1rem;
 }
 
 .cm-site-title {
@@ -86,18 +86,18 @@ body {
 }
 
 .cm-main-nav .wp-block-navigation-item__content {
-  padding: 0.45rem 0.7rem;
+  padding: 0.36rem 0.58rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.96rem;
+  font-size: 0.94rem;
   transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 .cm-main-nav .wp-block-navigation-item__content:hover,
 .cm-main-nav .wp-block-navigation-item__content:focus-visible {
   color: var(--cm-color-accent);
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
   outline: none;
 }
 
@@ -136,6 +136,9 @@ body {
   background: transparent;
   border-color: var(--cm-color-accent);
   color: var(--cm-color-text);
+  font-size: 0.9rem;
+  padding: 0.62rem 1.08rem;
+  box-shadow: 0 0 0 1px rgba(255, 122, 26, 0.14);
   min-width: 112px;
 }
 
@@ -165,6 +168,7 @@ body {
   background: var(--cm-color-accent);
   color: var(--cm-color-text);
   border-color: var(--cm-color-accent);
+  box-shadow: 0 0 0 1px rgba(255, 122, 26, 0.2);
 }
 
 
@@ -570,7 +574,13 @@ body {
 
 @media (max-width: 900px) {
   .cm-header-inner {
-    min-height: 62px;
+    min-height: 56px;
+  }
+
+  .wp-block-button.cm-btn--outline .wp-block-button__link {
+    font-size: 0.84rem;
+    padding: 0.5rem 0.92rem;
+    min-width: 98px;
   }
 
   .cm-main-nav .wp-block-navigation__responsive-container-open {
