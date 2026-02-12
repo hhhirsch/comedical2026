@@ -19,7 +19,7 @@
       <!-- wp:group {"className":"cm-card cm-service-card","layout":{"type":"constrained"}} -->
       <div class="wp-block-group cm-card cm-service-card">
         <!-- wp:group {"className":"cm-service-card__icon","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group cm-service-card__icon"></div>
+        <div class="wp-block-group cm-service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation" focusable="false"><path d="M10.5 4.75a1.5 1.5 0 0 1 3 0V9h4.25a1.5 1.5 0 0 1 0 3H13.5v4.25a1.5 1.5 0 0 1-3 0V12H6.25a1.5 1.5 0 0 1 0-3h4.25V4.75Z" fill="currentColor"/></svg></div>
         <!-- /wp:group -->
 
         <!-- wp:heading {"level":3,"className":"cm-service-card__title"} -->
@@ -39,7 +39,7 @@
       <!-- wp:group {"className":"cm-card cm-service-card","layout":{"type":"constrained"}} -->
       <div class="wp-block-group cm-card cm-service-card">
         <!-- wp:group {"className":"cm-service-card__icon","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group cm-service-card__icon"></div>
+        <div class="wp-block-group cm-service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation" focusable="false"><path d="M10.5 4.75a1.5 1.5 0 0 1 3 0V9h4.25a1.5 1.5 0 0 1 0 3H13.5v4.25a1.5 1.5 0 0 1-3 0V12H6.25a1.5 1.5 0 0 1 0-3h4.25V4.75Z" fill="currentColor"/></svg></div>
         <!-- /wp:group -->
 
         <!-- wp:heading {"level":3,"className":"cm-service-card__title"} -->
@@ -59,7 +59,7 @@
       <!-- wp:group {"className":"cm-card cm-service-card","layout":{"type":"constrained"}} -->
       <div class="wp-block-group cm-card cm-service-card">
         <!-- wp:group {"className":"cm-service-card__icon","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group cm-service-card__icon"></div>
+        <div class="wp-block-group cm-service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation" focusable="false"><path d="M10.5 4.75a1.5 1.5 0 0 1 3 0V9h4.25a1.5 1.5 0 0 1 0 3H13.5v4.25a1.5 1.5 0 0 1-3 0V12H6.25a1.5 1.5 0 0 1 0-3h4.25V4.75Z" fill="currentColor"/></svg></div>
         <!-- /wp:group -->
 
         <!-- wp:heading {"level":3,"className":"cm-service-card__title"} -->
@@ -79,7 +79,7 @@
       <!-- wp:group {"className":"cm-card cm-service-card","layout":{"type":"constrained"}} -->
       <div class="wp-block-group cm-card cm-service-card">
         <!-- wp:group {"className":"cm-service-card__icon","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group cm-service-card__icon"></div>
+        <div class="wp-block-group cm-service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation" focusable="false"><path d="M10.5 4.75a1.5 1.5 0 0 1 3 0V9h4.25a1.5 1.5 0 0 1 0 3H13.5v4.25a1.5 1.5 0 0 1-3 0V12H6.25a1.5 1.5 0 0 1 0-3h4.25V4.75Z" fill="currentColor"/></svg></div>
         <!-- /wp:group -->
 
         <!-- wp:heading {"level":3,"className":"cm-service-card__title"} -->
@@ -99,7 +99,7 @@
       <!-- wp:group {"className":"cm-card cm-service-card","layout":{"type":"constrained"}} -->
       <div class="wp-block-group cm-card cm-service-card">
         <!-- wp:group {"className":"cm-service-card__icon","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group cm-service-card__icon"></div>
+        <div class="wp-block-group cm-service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation" focusable="false"><path d="M10.5 4.75a1.5 1.5 0 0 1 3 0V9h4.25a1.5 1.5 0 0 1 0 3H13.5v4.25a1.5 1.5 0 0 1-3 0V12H6.25a1.5 1.5 0 0 1 0-3h4.25V4.75Z" fill="currentColor"/></svg></div>
         <!-- /wp:group -->
 
         <!-- wp:heading {"level":3,"className":"cm-service-card__title"} -->
@@ -119,7 +119,7 @@
       <!-- wp:group {"className":"cm-card cm-service-card","layout":{"type":"constrained"}} -->
       <div class="wp-block-group cm-card cm-service-card">
         <!-- wp:group {"className":"cm-service-card__icon","layout":{"type":"constrained"}} -->
-        <div class="wp-block-group cm-service-card__icon"></div>
+        <div class="wp-block-group cm-service-card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" role="presentation" focusable="false"><path d="M10.5 4.75a1.5 1.5 0 0 1 3 0V9h4.25a1.5 1.5 0 0 1 0 3H13.5v4.25a1.5 1.5 0 0 1-3 0V12H6.25a1.5 1.5 0 0 1 0-3h4.25V4.75Z" fill="currentColor"/></svg></div>
         <!-- /wp:group -->
 
         <!-- wp:heading {"level":3,"className":"cm-service-card__title"} -->
