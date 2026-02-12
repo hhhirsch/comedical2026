@@ -266,26 +266,35 @@ body {
 .cm-clients__list {
   margin: 0;
   width: 100%;
-  gap: clamp(0.75rem, 2vw, 1.75rem);
+  gap: clamp(1.25rem, 3vw, 2.75rem);
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .cm-clients__item {
   margin: 0;
-  min-height: 52px;
-  min-width: 120px;
-  padding: 0.75rem 1rem;
-  display: inline-flex;
+  min-height: 40px;
+  padding: 0;
+  display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--cm-color-text);
-  font-size: 0.94rem;
-  font-weight: 600;
-  border-radius: 0.7rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.04);
-  flex: 1 1 0;
+  color: rgba(255, 255, 255, 0.9);
+  opacity: 0.62;
+  transition: opacity 0.2s ease;
+  border: 0;
+  background: transparent;
+  flex: 0 0 auto;
+}
+
+.cm-clients__item:hover,
+.cm-clients__item:focus-within {
+  opacity: 0.9;
+}
+
+.cm-clients__logo {
+  display: block;
+  height: clamp(20px, 2.3vw, 28px);
+  width: auto;
 }
 
 
@@ -628,6 +637,7 @@ body {
   .cm-clients__list {
     width: 100%;
     justify-content: flex-start;
+    gap: 1.35rem;
     overflow-x: auto;
     padding-bottom: 0.2rem;
     -webkit-overflow-scrolling: touch;
@@ -641,7 +651,7 @@ body {
 
   .cm-clients__item {
     flex: 0 0 auto;
-    min-width: 130px;
+    min-width: max-content;
     scroll-snap-align: start;
   }
 }
