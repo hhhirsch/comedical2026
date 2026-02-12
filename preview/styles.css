@@ -87,17 +87,11 @@ main {
 }
 .cm-clients__inner { display: grid; gap: .8rem; }
 .cm-clients__label { margin: 0; text-transform: uppercase; letter-spacing: .08em; font-size: .85rem; color: var(--cm-color-muted); }
-.cm-clients__list { display: flex; gap: .8rem; overflow: auto; padding-bottom: .25rem; }
-.cm-clients__item {
-  flex: 0 0 auto;
-  min-width: 118px;
-  border-radius: .7rem;
-  border: 1px solid rgba(255,255,255,.25);
-  background: rgba(255,255,255,.04);
-  padding: .7rem 1rem;
-  text-align: center;
-  font-weight: 600;
-}
+.cm-clients__list { width: 100%; overflow: hidden; }
+.cm-clients__track { display: flex; width: max-content; gap: 1.4rem; align-items: center; animation: cm-clients-marquee 16s linear infinite; }
+.cm-clients__item { flex: 0 0 auto; min-width: max-content; opacity: .75; }
+.cm-clients__logo { display: block; width: auto; height: 34px; max-width: 220px; }
+@keyframes cm-clients-marquee { from { transform: translateX(0); } to { transform: translateX(calc(-50% - .7rem)); } }
 
 .cm-services { background: #f4f6fa; color: #1a2740; }
 .cm-services__title { margin: 0; font-size: clamp(2rem, 6vw, 3rem); }

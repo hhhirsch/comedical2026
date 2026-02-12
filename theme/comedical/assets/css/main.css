@@ -266,9 +266,16 @@ body {
 .cm-clients__list {
   margin: 0;
   width: 100%;
-  gap: clamp(1.25rem, 3vw, 2.75rem);
+  overflow: hidden;
+  position: relative;
+}
+
+.cm-clients__track {
+  display: flex;
+  width: max-content;
+  gap: clamp(1.5rem, 4vw, 3rem);
   align-items: center;
-  justify-content: flex-start;
+  animation: cm-clients-marquee 18s linear infinite;
 }
 
 .cm-clients__item {
@@ -279,7 +286,7 @@ body {
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.9);
-  opacity: 0.62;
+  opacity: 0.72;
   transition: opacity 0.2s ease;
   border: 0;
   background: transparent;
@@ -288,13 +295,30 @@ body {
 
 .cm-clients__item:hover,
 .cm-clients__item:focus-within {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 .cm-clients__logo {
   display: block;
-  height: clamp(20px, 2.3vw, 28px);
   width: auto;
+  height: clamp(26px, 3vw, 36px);
+  max-width: clamp(150px, 24vw, 220px);
+}
+
+@keyframes cm-clients-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - (clamp(1.5rem, 4vw, 3rem) / 2)));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cm-clients__track {
+    animation: none;
+  }
 }
 
 
@@ -695,23 +719,16 @@ body {
 
   .cm-clients__list {
     width: 100%;
-    justify-content: flex-start;
-    gap: 1.35rem;
-    overflow-x: auto;
-    padding-bottom: 0.2rem;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
   }
 
-  .cm-clients__list::-webkit-scrollbar {
-    display: none;
+  .cm-clients__track {
+    gap: 1.35rem;
+    animation-duration: 14s;
   }
 
   .cm-clients__item {
     flex: 0 0 auto;
     min-width: max-content;
-    scroll-snap-align: start;
   }
 }
 
