@@ -593,6 +593,54 @@ body {
 
 
 @media (max-width: 900px) {
+  .cm-hero-title {
+    max-width: 14ch;
+    font-size: clamp(2rem, 9vw, 3rem);
+    line-height: 1.08;
+  }
+
+  .cm-hero-subline {
+    max-width: 44ch;
+    color: #c8d2e2;
+    font-size: 0.97rem;
+    line-height: 1.48;
+  }
+
+  .cm-hero-actions {
+    margin-top: 0.3rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.55rem;
+    align-items: stretch;
+  }
+
+  .cm-hero-actions .wp-block-button {
+    width: 100%;
+    margin: 0;
+  }
+
+  .cm-hero-actions .wp-block-button__link {
+    width: 100%;
+    min-height: 2.95rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 1rem;
+  }
+
+  .cm-kpi-row {
+    margin-top: 0.7rem;
+    gap: 0.75rem;
+  }
+
+  .cm-kpi-item {
+    min-width: 112px;
+  }
+
+  .cm-kpi-label {
+    margin-top: 0.08rem;
+  }
+
   .cm-header-inner {
     min-height: 56px;
   }
